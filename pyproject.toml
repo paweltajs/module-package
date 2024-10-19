@@ -1,0 +1,24 @@
+[project]
+name = "something"
+description = "something"
+version = "0.0.0"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = [
+   "--import-mode=importlib",
+]
+testpaths = ["tests/company/dp/logic/business"]
+python_files = "test_*.py"
+python_functions = "test_*"
+pythonpath = ["src"]
+norecursedirs = "*"
